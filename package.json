@@ -1,0 +1,19 @@
+{
+  "name": "githubactions",
+  "version": "0.9.6",
+  "description": "Testing Github Actions releases",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dobrinyonkov/githubactions.git"
+  },
+  "author": "Dobrin Dimchev <dobrin.yonkov1@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dobrinyonkov/githubactions/issues"
+  },
+  "homepage": "https://github.com/dobrinyonkov/githubactions#readme"
+}
