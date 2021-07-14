@@ -25,9 +25,31 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12
+      - name: Download site content
+        uses: actions/download-artifact@v2
+        with:
+          name: artifact
+      - name: Archive site content
+        uses: thedoctor0/zip-release@master
+        with:
+          filename: artifact.zip
       - name: Install dependencies
         run: npm ci
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npx semantic-release
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+      # Runs a single command using the runners shell
+      - name: Install NPM dependencies
+        run: npm install
+      - uses: actions/upload-artifact@v2
+        with:
+          name: artifact
+          path: dist/
