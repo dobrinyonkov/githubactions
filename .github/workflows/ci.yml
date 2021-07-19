@@ -29,7 +29,7 @@ jobs:
       - name: Download site content
         uses: actions/download-artifact@v2
         with:
-          name: artifact
+          name: artifact.zip
       - name: Install dependencies
         run: npm ci
       - name: Release
