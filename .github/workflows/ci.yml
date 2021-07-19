@@ -29,11 +29,7 @@ jobs:
       - name: Download site content
         uses: actions/download-artifact@v2
         with:
-          name: artifact
-      - name: Archive site content
-        uses: thedoctor0/zip-release@master
-        with:
-          filename: artifact.zip
+          name: artifact.zip
       - name: Install dependencies
         run: npm ci
       - name: Release
@@ -50,7 +46,11 @@ jobs:
       # Runs a single command using the runners shell
       - name: Install NPM dependencies
         run: npm install
+      - name: Archive site content
+        uses: thedoctor0/zip-release@master
+        with:
+          filename: artifact.zip
       - uses: actions/upload-artifact@v2
         with:
-          name: artifact
-          path: dist/
+          name: artifact.zip
+          path: artifact.zip
