@@ -5,7 +5,8 @@
   "description": "Testing Github Actions releases",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "zip -r dist.zip dist/*"
   },
   "repository": {
     "type": "git",
