@@ -3,7 +3,9 @@
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
       ["@semantic-release/github", {
-        "assets": "artifact.zip"
+        "assets": [
+          {"path": "artifact.zip", "label": "Artifact distribution"}
+        ]
       }]
     ]
   }
