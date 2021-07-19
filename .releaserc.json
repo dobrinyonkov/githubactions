@@ -4,10 +4,11 @@
       "@semantic-release/release-notes-generator",
       "@semantic-release/changelog",
       ["@semantic-release/npm", {
-        "tarballDir": "release"
+        "npmPublish": "false",
+        "tarballDir": "dist"
       }],
       ["@semantic-release/github", {
-        "assets": "release/*.tgz"
+        "assets": "dist/*.tgz"
       }]
     ]
   }
