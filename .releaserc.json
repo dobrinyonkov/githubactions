@@ -8,6 +8,18 @@
         "prepareCmd": "node ./scripts/update-version.js ${nextRelease.version}"
       }
     ],
-    "@semantic-release/changelog"
+    "@semantic-release/changelog",
+    [
+      "@semantic-release/github",
+      {
+        "assets": [
+          {
+            "path": "dist.zip",
+            "name": "artifact-v${nextRelease.version}.zip",
+            "label": "Artifact distribution"
+          }
+        ]
+      }
+    ]
   ]
 }
