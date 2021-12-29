@@ -1,7 +1,7 @@
 {
   "name": "githubactions",
   "version": "0.9.6",
-  "private": true,
+  "private": false,
   "description": "Testing Github Actions releases",
   "main": "index.js",
   "scripts": {
